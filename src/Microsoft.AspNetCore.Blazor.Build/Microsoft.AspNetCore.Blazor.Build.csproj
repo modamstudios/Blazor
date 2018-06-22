@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
@@ -73,8 +73,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="$(RazorPackageVersion)" PrivateAssets="None" />
 
     <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
-    <PackageReference Include="Microsoft.Extensions.FileProviders.Composite" Version="2.0.0" />
-    <PackageReference Include="Microsoft.Extensions.FileProviders.Physical" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Composite" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Physical" Version="2.1.0" />
     <PackageReference Include="Mono.Cecil" Version="0.10.0-beta7" />
     <PackageReference Include="System.CodeDom" Version="4.4.0" />
   </ItemGroup>
