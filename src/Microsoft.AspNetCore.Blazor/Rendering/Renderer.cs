@@ -1,11 +1,10 @@
-﻿// Copyright (c) .NET Foundation. All rights reserved.
+// Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using Microsoft.AspNetCore.Blazor.Components;
 using Microsoft.AspNetCore.Blazor.RenderTree;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Microsoft.AspNetCore.Blazor.Rendering
 {
@@ -70,7 +69,7 @@ namespace Microsoft.AspNetCore.Blazor.Rendering
         /// <param name="componentId">The unique identifier for the component within the scope of this <see cref="Renderer"/>.</param>
         /// <param name="eventHandlerId">The <see cref="RenderTreeFrame.AttributeEventHandlerId"/> value from the original event attribute.</param>
         /// <param name="eventArgs">Arguments to be passed to the event handler.</param>
-        protected void DispatchEvent(int componentId, int eventHandlerId, UIEventArgs eventArgs)
+        public void DispatchEvent(int componentId, int eventHandlerId, UIEventArgs eventArgs)
         {
             if (_eventBindings.TryGetValue(eventHandlerId, out var binding))
             {

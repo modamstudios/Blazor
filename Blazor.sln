@@ -95,11 +95,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Blazor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Blazor.Analyzers.Test", "test\Microsoft.AspNetCore.Blazor.Analyzers.Test\Microsoft.AspNetCore.Blazor.Analyzers.Test.csproj", "{CF3B5990-7A05-4993-AACA-D2C8D7AFF6E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.JSInterop", "src\Microsoft.JSInterop\Microsoft.JSInterop.csproj", "{C866B19D-AFFF-45B7-8DAB-71805F39D516}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.JSInterop", "src\Microsoft.JSInterop\Microsoft.JSInterop.csproj", "{C866B19D-AFFF-45B7-8DAB-71805F39D516}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.JSInterop.Test", "test\Microsoft.JSInterop.Test\Microsoft.JSInterop.Test.csproj", "{BA1CE1FD-89D8-423F-A21B-6B212674EB39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.JSInterop.Test", "test\Microsoft.JSInterop.Test\Microsoft.JSInterop.Test.csproj", "{BA1CE1FD-89D8-423F-A21B-6B212674EB39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.WebAssembly.Interop", "src\Mono.WebAssembly.Interop\Mono.WebAssembly.Interop.csproj", "{C56873E6-8F49-476E-AF51-B5D187832CF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mono.WebAssembly.Interop", "src\Mono.WebAssembly.Interop\Mono.WebAssembly.Interop.csproj", "{C56873E6-8F49-476E-AF51-B5D187832CF5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspnetCore.Blazor.Server.Test", "test\Microsoft.AspnetCore.Blazor.Server.Test\Microsoft.AspnetCore.Blazor.Server.Test.csproj", "{142AA6BC-5110-486B-A34D-6878E5E2CE95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServerSideBlazor", "ServerSideBlazor", "{3173A9C0-4F66-4064-83EC-3C206F1430FB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerSideBlazor.Server", "samples\ServerSideBlazor.Server\ServerSideBlazor.Server.csproj", "{5655AFF9-612C-4947-8221-7DB6949A6CA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerSideBlazor.Client", "samples\ServerSideBlazor.Client\ServerSideBlazor.Client.csproj", "{33C361D8-CAF1-47C0-A344-251AEF4FE1FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -368,6 +376,30 @@ Global
 		{C56873E6-8F49-476E-AF51-B5D187832CF5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C56873E6-8F49-476E-AF51-B5D187832CF5}.ReleaseNoVSIX|Any CPU.ActiveCfg = Release|Any CPU
 		{C56873E6-8F49-476E-AF51-B5D187832CF5}.ReleaseNoVSIX|Any CPU.Build.0 = Release|Any CPU
+		{142AA6BC-5110-486B-A34D-6878E5E2CE95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142AA6BC-5110-486B-A34D-6878E5E2CE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142AA6BC-5110-486B-A34D-6878E5E2CE95}.DebugNoVSIX|Any CPU.ActiveCfg = Debug|Any CPU
+		{142AA6BC-5110-486B-A34D-6878E5E2CE95}.DebugNoVSIX|Any CPU.Build.0 = Debug|Any CPU
+		{142AA6BC-5110-486B-A34D-6878E5E2CE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142AA6BC-5110-486B-A34D-6878E5E2CE95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{142AA6BC-5110-486B-A34D-6878E5E2CE95}.ReleaseNoVSIX|Any CPU.ActiveCfg = Release|Any CPU
+		{142AA6BC-5110-486B-A34D-6878E5E2CE95}.ReleaseNoVSIX|Any CPU.Build.0 = Release|Any CPU
+		{5655AFF9-612C-4947-8221-7DB6949A6CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5655AFF9-612C-4947-8221-7DB6949A6CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5655AFF9-612C-4947-8221-7DB6949A6CA4}.DebugNoVSIX|Any CPU.ActiveCfg = Debug|Any CPU
+		{5655AFF9-612C-4947-8221-7DB6949A6CA4}.DebugNoVSIX|Any CPU.Build.0 = Debug|Any CPU
+		{5655AFF9-612C-4947-8221-7DB6949A6CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5655AFF9-612C-4947-8221-7DB6949A6CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5655AFF9-612C-4947-8221-7DB6949A6CA4}.ReleaseNoVSIX|Any CPU.ActiveCfg = Release|Any CPU
+		{5655AFF9-612C-4947-8221-7DB6949A6CA4}.ReleaseNoVSIX|Any CPU.Build.0 = Release|Any CPU
+		{33C361D8-CAF1-47C0-A344-251AEF4FE1FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C361D8-CAF1-47C0-A344-251AEF4FE1FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C361D8-CAF1-47C0-A344-251AEF4FE1FE}.DebugNoVSIX|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C361D8-CAF1-47C0-A344-251AEF4FE1FE}.DebugNoVSIX|Any CPU.Build.0 = Debug|Any CPU
+		{33C361D8-CAF1-47C0-A344-251AEF4FE1FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C361D8-CAF1-47C0-A344-251AEF4FE1FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C361D8-CAF1-47C0-A344-251AEF4FE1FE}.ReleaseNoVSIX|Any CPU.ActiveCfg = Release|Any CPU
+		{33C361D8-CAF1-47C0-A344-251AEF4FE1FE}.ReleaseNoVSIX|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -413,6 +445,10 @@ Global
 		{C866B19D-AFFF-45B7-8DAB-71805F39D516} = {B867E038-B3CE-43E3-9292-61568C46CDEB}
 		{BA1CE1FD-89D8-423F-A21B-6B212674EB39} = {ADA3AE29-F6DE-49F6-8C7C-B321508CAE8E}
 		{C56873E6-8F49-476E-AF51-B5D187832CF5} = {7B5CAAB1-A3EB-44F7-87E3-A13ED89FC17D}
+		{142AA6BC-5110-486B-A34D-6878E5E2CE95} = {ADA3AE29-F6DE-49F6-8C7C-B321508CAE8E}
+		{3173A9C0-4F66-4064-83EC-3C206F1430FB} = {F5FDD4E5-6A52-4A86-BE5E-5E42CB1DC8DA}
+		{5655AFF9-612C-4947-8221-7DB6949A6CA4} = {3173A9C0-4F66-4064-83EC-3C206F1430FB}
+		{33C361D8-CAF1-47C0-A344-251AEF4FE1FE} = {3173A9C0-4F66-4064-83EC-3C206F1430FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {504DA352-6788-4DC0-8705-82167E72A4D3}

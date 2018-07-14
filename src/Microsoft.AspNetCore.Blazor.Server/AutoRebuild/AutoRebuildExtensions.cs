@@ -1,4 +1,4 @@
-﻿// Copyright (c) .NET Foundation. All rights reserved.
+// Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using Microsoft.AspNetCore.Blazor.Server;
@@ -16,10 +16,9 @@ namespace Microsoft.AspNetCore.Builder
     internal static class AutoRebuildExtensions
     {
         // Note that we don't need to watch typical static-file extensions (.css, .js, etc.)
-        // because anything in wwwroot is just served directly from disk on each reload. But
-        // as a special case, we do watch index.html because it needs compilation.
+        // because anything in wwwroot is just served directly from disk on each reload.
         // TODO: Make the set of extensions and exclusions configurable in csproj
-        private static string[] _includedSuffixes = new[] { ".cs", ".cshtml", "index.html" };
+        private static string[] _includedSuffixes = new[] { ".cs", ".cshtml" };
         private static string[] _excludedDirectories = new[] { "obj", "bin" };
 
         // To ensure the FileSystemWatchers aren't collected, reference them
@@ -27,7 +26,7 @@ namespace Microsoft.AspNetCore.Builder
         // way to remove middleware once it's registered.
         private static List<object> _uncollectableWatchers = new List<object>();
 
-        public static void UseHostedAutoRebuild(this IApplicationBuilder appBuilder, BlazorConfig config, string hostAppContentRootPath)
+        public static void UseHostedAutoRebuild(this IApplicationBuilder app, BlazorConfig config, string hostAppContentRootPath)
         {
             var isFirstFileWrite = true;
             WatchFileSystem(config, () =>
@@ -51,7 +50,7 @@ namespace Microsoft.AspNetCore.Builder
                     catch (Exception ex)
                     {
                         // If we don't have permission to write these files, autorebuild will not be enabled
-                        var loggerFactory = appBuilder.ApplicationServices.GetRequiredService<ILoggerFactory>();
+                        var loggerFactory = app.ApplicationServices.GetRequiredService<ILoggerFactory>();
                         var logger = loggerFactory.CreateLogger(typeof (AutoRebuildExtensions));
                         logger?.LogWarning(ex,
                             "Cannot autorebuild because there was an error when writing to a file in '{0}'.",
@@ -63,7 +62,7 @@ namespace Microsoft.AspNetCore.Builder
             });
         }
 
-        public static void UseDevServerAutoRebuild(this IApplicationBuilder appBuilder, BlazorConfig config)
+        public static void UseDevServerAutoRebuild(this IApplicationBuilder app, BlazorConfig config)
         {
             // Currently this only supports VS for Windows. Later on we can add
             // an IRebuildService implementation for VS for Mac, etc.
@@ -87,7 +86,7 @@ namespace Microsoft.AspNetCore.Builder
                 buildToken = new RebuildToken(DateTime.Now);
             });
 
-            appBuilder.Use(async (context, next) =>
+            app.Use(async (context, next) =>
             {
                 try
                 {
